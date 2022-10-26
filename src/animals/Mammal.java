@@ -36,4 +36,9 @@ public abstract class Mammal extends Animal {
     public void sleep() {
         System.out.println("Посплю в теплом месте");
     }
+
+    @Override
+    public void move() {
+        System.out.println("Прошел от одной точки до другой");
+    }
 }

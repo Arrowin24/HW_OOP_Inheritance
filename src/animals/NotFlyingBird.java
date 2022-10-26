@@ -26,4 +26,9 @@ public class NotFlyingBird extends Bird {
     public boolean equals(Object obj) {
         return this.hashCode()==obj.hashCode();
     }
+
+    @Override
+    public void move() {
+        System.out.println("Дотопал от одной точки к другой");
+    }
 }

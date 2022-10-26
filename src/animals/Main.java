@@ -29,5 +29,7 @@ public class Main {
         bear.hunt();
         snake.sleep();
         seagull.walk();
+        peacock.move();
+        albatross.move();
     }
 }

@@ -37,4 +37,9 @@ public class Amphibian extends Animal {
     public void sleep() {
         System.out.println("Отдыхаю в сыром месте");
     }
+
+    @Override
+    public void move() {
+        System.out.println("Проскочил от одной точки до другой");
+    }
 }

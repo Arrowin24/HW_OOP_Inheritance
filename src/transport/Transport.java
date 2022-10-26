@@ -1,5 +1,7 @@
 package transport;
 
+import java.time.LocalDate;
+
 public abstract class Transport {
     private String brand;
     private String model;
@@ -10,14 +12,30 @@ public abstract class Transport {
 
     // Два конструктора
     public Transport() {
-        this("default", "default", 2000, "default", "Black", 50);
+        this("", "", 0, "", "", 0);
     }
 
     public Transport(String brand, String model, int yearIssue, String country, String color, double maxSpeed) {
-        this.brand = brand;
-        this.model = model;
-        this.yearIssue = yearIssue;
-        this.country = country;
+        if(!brand.isBlank()){
+            this.brand = brand;
+        } else {
+            this.brand="default";
+        }
+        if(!model.isBlank()){
+            this.model = model;
+        } else {
+            this.model="default";
+        }
+        if(yearIssue>1900&&yearIssue<=LocalDate.now().getYear()){
+            this.yearIssue = yearIssue;
+        } else {
+            this.yearIssue = 2000;
+        }
+        if(!country.isBlank()){
+            this.country = country;
+        } else {
+            this.country="default";
+        }
         setColor(color);
         setMaxSpeed(maxSpeed);
     }
